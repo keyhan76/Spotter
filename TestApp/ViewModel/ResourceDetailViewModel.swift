@@ -57,7 +57,11 @@ struct ResourceDetailViewModel {
         // Create address
         let address = "\(resource.addresses?.first?.address1 ?? "") \(resource.addresses?.first?.label ?? "") \(resource.addresses?.first?.city ?? "") \(resource.addresses?.first?.state ?? "") \(resource.addresses?.first?.country ?? "")"
         
-        self.address = address
+        if address == "    " {
+            self.address = "No Available Data"
+        } else {
+            self.address = address
+        }
         
         // Create Descriptoion
         if let text = resource.description.html2AttStr {

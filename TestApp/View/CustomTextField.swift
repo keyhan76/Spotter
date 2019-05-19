@@ -16,9 +16,9 @@ class CustomTextField: UITextField {
         // Add shadow
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.5
+        layer.shadowOpacity = 0.2
         layer.shadowOffset = .zero
-        layer.shadowRadius = 4
+        layer.shadowRadius = 6
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
     }
