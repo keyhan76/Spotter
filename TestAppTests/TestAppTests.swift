@@ -10,25 +10,48 @@ import XCTest
 @testable import TestApp
 
 class TestAppTests: XCTestCase {
+    var viewModel: ResourceDetailViewModel!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
+        super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testJSONDecoding() {
+        
+        // Convert restaurant.json to Data
+        
+        let testBundle = Bundle(for: type(of: self))
+        let path = testBundle.path(forResource: "restaurants", ofType: "json")
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped) else {
+            fatalError("Data is nil")
         }
+        
+        // Provie any Codable struct
+        let resource = try! JSONDecoder().decode(Resources.self, from: data)
+        
+        XCTAssertEqual(resource.first?.title, "Pizza Spanos")
     }
 
+    func testResourceDetailViewModel() {
+        let testBundle = Bundle(for: type(of: self))
+        let path = testBundle.path(forResource: "restaurants", ofType: "json")
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped) else {
+            fatalError("Data is nil")
+        }
+        
+        let resource = try! JSONDecoder().decode(Resources.self, from: data)
+        
+        guard let firResource = resource.first else {
+            fatalError("First Resource is nil")
+        }
+        
+        viewModel = ResourceDetailViewModel(resource: firResource)
+        
+        XCTAssertEqual(viewModel.title, "Pizza Spanos")
+    }
 }

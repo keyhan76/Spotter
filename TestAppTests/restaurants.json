@@ -1,0 +1,153 @@
+[
+  {
+    "_id": "5983a9e2951cf747207bed45",
+    "slug": "pizza-spanos",
+    "eid": "8bb64496-3e68-4b4d-902e-1ac3ec494f21",
+    "title": "Pizza Spanos",
+    "description": "<p>Powering Devs Everywhere</p>",
+    "category_eid": "ac5bd194-11de-48f6-94db-fd16cfccb570",
+    "__v": 2,
+    "photo": "https://s3.amazonaws.com/qsapi-files/files/49851e71-5114-4d94-9d9a-7f3cacb1764e/a372062a-9a75-4a94-ba1b-2e6a3df21b54.jpeg",
+    "_active": true,
+    "updated_at": "2017-08-04T14:37:01.290Z",
+    "created_at": "2017-08-03T22:55:30.469Z",
+    "addresses": [
+      {
+        "address1": "1360 Sunnybrooke",
+        "label": "Pizza Spanos",
+        "zipCode": "H9B 2W5",
+        "city": "DDO",
+        "state": "QC",
+        "country": "Canada",
+        "gps": {
+          "latitude": "45.490834",
+          "longitude": "-73.777091"
+        }
+      }
+    ],
+    "contactInfo": {
+      "website": [
+        "https://www.google.com"
+      ],
+      "email": [
+        "email@domain.com"
+      ],
+      "phoneNumber": [
+        "15147028287"
+      ]
+    }
+  },
+  {
+    "_id": "5983ab39951cf747207bed47",
+    "slug": "elixor",
+    "eid": "99e372d1-a29d-49f9-b066-487a3bca865e",
+    "title": "Elixor",
+    "description": "<p>The Publishing Lunch Resto</p>",
+    "bizHours": {
+      "sunday": {
+        "from": "10:00 AM",
+        "to": "11:45 AM"
+      },
+      "monday": {
+        "from": "09:00 AM",
+        "to": "06:30 PM"
+      }
+    },
+    "category_eid": "ac5bd194-11de-48f6-94db-fd16cfccb570",
+    "__v": 1,
+    "photo": "https://s3.amazonaws.com/qsapi-files/files/49851e71-5114-4d94-9d9a-7f3cacb1764e/0f341b02-1e13-4e6f-8911-2ac5fbdbfcc9.jpeg",
+    "_active": true,
+    "updated_at": "2017-08-04T14:36:36.747Z",
+    "created_at": "2017-08-03T23:01:13.731Z",
+    "addresses": [
+      {
+        "address1": "3237 Sources Blvd",
+        "city": "Montreal",
+        "state": "QC",
+        "zipCode": "H9B 1Z6",
+        "country": "Canada",
+        "label": "Elixor"
+      }
+    ],
+    "contactInfo": {
+      "website": [
+        "https://www.google.com"
+      ],
+      "email": [
+        "email@domain.com"
+      ],
+      "phoneNumber": [
+        "15147028287"
+      ]
+    }
+  },
+  {
+    "_id": "5983ab85951cf747207bed48",
+    "slug": "quickseries",
+    "eid": "dc0b0a4c-a9dc-4070-a56d-dca62ff4d849",
+    "title": "QuickSeries",
+    "description": "<p>QuickSeries delivers content</p>",
+    "category_eid": "ac5bd194-11de-48f6-94db-fd16cfccb570",
+    "__v": 0,
+    "photo": "https://s3.amazonaws.com/qsapi-files/files/49851e71-5114-4d94-9d9a-7f3cacb1764e/33c22133-1c17-43b8-bf71-b24692c49e5b.jpeg",
+    "_active": true,
+    "updated_at": "2017-08-04T14:39:45.585Z",
+    "created_at": "2017-08-03T23:02:29.705Z",
+    "contactInfo": {
+      "website": [
+        "http://www.quickseries.com"
+      ],
+      "email": [
+        "justin.ledoux@quickseries.com"
+      ],
+      "faxNumber": [
+        "8773293291"
+      ],
+      "tollFree": [
+        "19003614653"
+      ],
+      "phoneNumber": [
+        "9545841606"
+      ]
+    }
+  },
+  {
+    "_id": "5983a186951cf747207bed40",
+    "slug": "quesada",
+    "eid": "4a429d70-f96b-4378-9653-c0c57e03adff",
+    "title": "Quesada",
+    "description": "<p>Get the big honking burrito. Matti can give you tips how to eat it neatly.</p>",
+    "category_eid": "ac5bd194-11de-48f6-94db-fd16cfccb570",
+    "__v": 4,
+    "photo": "https://s3.amazonaws.com/qsapi-files/files/49851e71-5114-4d94-9d9a-7f3cacb1764e/d6e9f7c7-360b-4b16-8041-310f247a1bfe.jpeg",
+    "_active": true,
+    "updated_at": "2017-08-04T14:36:10.207Z",
+    "created_at": "2017-08-03T22:19:50.918Z",
+    "socialMedia": {
+      "youtubeChannel": [
+        "https://www.youtube.com/channel/UCT0hbLDa-unWsnZ6Rjzkfug"
+      ],
+      "twitter": [
+        "https://twitter.com/quickseriespub"
+      ],
+      "facebook": [
+        "https://www.facebook.com/pages/Quickseries-Publishing-Inc/946403368763231"
+      ]
+    },
+    "addresses": [
+      {
+        "label": "Quesada",
+        "address1": "3343 Boul des Sources",
+        "city": "Montreal",
+        "zipCode": "H9B1Z8",
+        "state": "QC",
+        "country": "Canada"
+      }
+    ],
+    "contactInfo": {
+      "phoneNumber": [
+        "15145424545"
+      ]
+    }
+  }
+]
