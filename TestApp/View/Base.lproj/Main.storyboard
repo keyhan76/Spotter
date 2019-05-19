@@ -226,7 +226,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esL-Am-7jV">
-                                <rect key="frame" x="27" y="237" width="125" height="45"/>
+                                <rect key="frame" x="27" y="236.5" width="125" height="45"/>
                                 <color key="backgroundColor" red="0.91764705882352937" green="0.39215686274509803" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="Opd-41-rPu"/>
@@ -349,14 +349,34 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g6S-sS-X66"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tlb-nF-rZX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="pXP-0T-Q4R"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="resourceDetailVCView" destination="ExS-SC-tBC" id="vVf-Jf-UkA"/>
                         <outlet property="resourceImgView" destination="aT3-8Z-mPC" id="DB4-Ea-ips"/>
+                        <segue destination="Nns-UK-MiR" kind="show" identifier="WebViewVC" id="IQt-eL-pbS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBu-i8-S59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3873.75" y="99.295774647887328"/>
+        </scene>
+        <!--Web ViewVC-->
+        <scene sceneID="j4A-z7-q3x">
+            <objects>
+                <viewController id="Nns-UK-MiR" customClass="WebViewVC" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aL9-yb-6c8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tqg-Ka-ldb"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="gVp-vT-hdf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6E-H3-TMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4721" y="101"/>
         </scene>
         <!--Resource DetailVC-->
         <scene sceneID="joj-gu-8it">

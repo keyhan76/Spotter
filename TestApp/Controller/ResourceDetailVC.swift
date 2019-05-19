@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ResourceDetailVC: UITableViewController {
     
@@ -28,6 +29,7 @@ class ResourceDetailVC: UITableViewController {
     
     // MARK: - Public Variables
     public var resource: Resource?
+    public var urlCallBack: ((_ url: String) -> Void)?
 
     // MARK: - View Did Load
     override func viewDidLoad() {
@@ -73,23 +75,32 @@ class ResourceDetailVC: UITableViewController {
             }
         case 102:
             if sender.isEqual(emailBtn) {
-                guard let number = URL(string: "mailto:\(viewModel.email ?? "")") else { return }
-                UIApplication.shared.open(number)
+                // Send Email to the selected email
+                sendEmail()
             }
         case 103:
             if sender.isEqual(twitterBtn) {
-                guard let number = URL(string: "\(viewModel.twitterAcc ?? "")") else { return }
-                UIApplication.shared.open(number)
+                guard let link = viewModel.twitterAcc else {
+                    return
+                }
+                urlCallBack?(link)
+                parent?.performSegue(withIdentifier: "WebViewVC", sender: nil)
             }
         case 104:
             if sender.isEqual(utubeBtn) {
-                guard let number = URL(string: "\(viewModel.youtubeAcc ?? "")") else { return }
-                UIApplication.shared.open(number)
+                guard let link = viewModel.youtubeAcc else {
+                    return
+                }
+                urlCallBack?(link)
+                parent?.performSegue(withIdentifier: "WebViewVC", sender: nil)
             }
         case 105:
             if sender.isEqual(siteBtn) {
-                guard let number = URL(string: "\(viewModel.webSite ?? "")") else { return }
-                UIApplication.shared.open(number)
+                guard let link = viewModel.webSite else {
+                    return
+                }
+                urlCallBack?(link)
+                parent?.performSegue(withIdentifier: "WebViewVC", sender: nil)
             }
         default:
             break
@@ -115,5 +126,22 @@ class ResourceDetailVC: UITableViewController {
                 UIApplication.shared.open(url)
             }
         }
+    }
+    
+    // MARK: - Helpers
+    private func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let composeVC = MFMailComposeViewController()
+            composeVC.mailComposeDelegate = self
+            composeVC.setSubject("Test Subject")
+            composeVC.setToRecipients([viewModel.email ?? ""])
+            self.present(composeVC, animated: true, completion: nil)
+        }
+    }
+}
+
+extension ResourceDetailVC: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

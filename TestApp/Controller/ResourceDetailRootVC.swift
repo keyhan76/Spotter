@@ -14,6 +14,9 @@ class ResourceDetailRootVC: UIViewController {
     @IBOutlet weak var resourceDetailVCView: CustomView!
     @IBOutlet weak var resourceImgView: UIImageView!
     
+    // MARk: - Private Variables
+    private var url: String!
+    
     // MARk: - Public Variables
     public var resource: Resource?
     
@@ -34,6 +37,14 @@ class ResourceDetailRootVC: UIViewController {
         let destination = segue.destination
         if let desVC = destination as? ResourceDetailVC {
             desVC.resource = resource
+            desVC.urlCallBack = { [unowned self] (url) in
+                self.url = url
+            }
+        }
+        
+        if segue.identifier == "WebViewVC" {
+            let desVC = segue.destination as! WebViewVC
+            desVC.url = self.url
         }
     }
 
