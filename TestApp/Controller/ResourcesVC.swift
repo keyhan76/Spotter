@@ -91,6 +91,10 @@ class ResourcesVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
 
 // MARK: - UITableView DataSource

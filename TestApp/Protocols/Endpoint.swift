@@ -42,9 +42,9 @@ extension ResourceType: Endpoint {
     
     var path: String {
         switch self {
-        case .categories: return "/AmirDaliri/getTestJson/master/categories.json"
-        case .restaurants: return "/AmirDaliri/getTestJson/master/restaurants.json"
-        case .vacation: return "/AmirDaliri/getTestJson/master/vacation-spot.json"
+        case .categories: return "/keyhan76/TestJSON/master/categories.json"
+        case .restaurants: return "/keyhan76/TestJSON/master/restaurants.json"
+        case .vacation: return "/keyhan76/TestJSON/master/vacation-spot.json"
         }
     }
 }
