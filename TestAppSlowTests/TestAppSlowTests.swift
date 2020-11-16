@@ -27,7 +27,7 @@ class TestAppSlowTests: XCTestCase {
     func testValidCallToGithubGetsHTTPStatusCode200() {
         
         // given
-        let url = URL(string: "https://raw.githubusercontent.com/AmirDaliri/getTestJson/master/restaurants.json")
+        let url = URL(string: "https://raw.githubusercontent.com/keyhan76/TestJSON/master/restaurants.json")
         
         let promise = expectation(description: "Completion handler invoked")
         var statusCode: Int?
